@@ -1,0 +1,171 @@
+$white: white;
+$black: black;
+$gainsboro: gainsboro;
+
+@mixin item-about-user($padding-bottom) {
+    padding-top: $padding-bottom;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+.app {
+    margin: 10px 10px 10px 10px;
+}
+.f-white {
+    color: $white;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+.fs {
+    font-style: italic;
+}
+.fz-2 {
+    font-size: 2em;
+}
+
+.fz-small {
+    font-size: 0.9em;
+}
+
+.pos-center {
+    text-align: center;
+}
+
+.bg-grey {
+    background-color: $gainsboro;
+}
+
+.bg-black {
+    background-color: $black;
+}
+
+.bg-white-container {
+    background-color: white;
+    opacity: 0.6;
+    height: 50px;
+}
+
+.code-bg {
+    background: url(public/code.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.portfolio {
+
+    &__user-head {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__user-avatar {
+        width: 96%;
+        max-width: 200px;
+    }
+
+    &__user-avatar img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__user-about {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__user-about-info {
+        padding: 20px 0 0 20px;
+        width: 80%;
+    }
+
+    // &__user-about-name {
+        
+    // }
+    &__user-about-location {
+        @include item-about-user(7px);
+    }
+    &__user-about-langue {
+        @include item-about-user(20px);
+    }
+    &__user-about-skills {
+        @include item-about-user(15px);
+    }
+
+    &__user-about-skills-text {
+        display: inline-block;
+        padding: 5px 5px 5px 5px;
+        border-radius: 3px;
+        margin: 0 5px 0 0;
+    }
+
+    &__user-about-button {
+        @include item-about-user(10px);
+    }
+
+    &__user-print {
+        width: 20%;
+        margin: 5px -40px 0 0;
+    }
+
+    &__user-print-button {
+        height: 25px;
+        width: 170px;
+        border-radius: 15px;
+    }
+
+    &__user-print-button-text {
+        padding: 5px 5px 5px 15px;
+        color: $white;
+        cursor: pointer;
+    }
+
+    &__user-description {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__user-description-item {
+        width: 20%;
+        height: 244px;
+        border: 1px solid gainsboro;
+        flex-grow: 1;
+        background: url(public/code.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    }
+
+    &__user-description-item-head {
+        padding: 20px 20px 0 20px;
+    }
+
+    &__user-description-item-content {
+        padding: 10px 10px 10px 10px;
+    }
+
+    &__user-description-item-first {
+        height: 50%;
+        border-bottom: 1px solid gainsboro;
+    }
+
+    &__user-description-item-content:nth-child(2) {
+        padding: 30px 0 0 0; 
+    } 
+
+    &__user-description-item-sp {
+        display: block;
+    }
+
+    &__user-description-item-footer {
+        text-align: right;
+        padding: 20px;
+    }
+}

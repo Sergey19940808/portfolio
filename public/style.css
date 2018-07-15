@@ -1,7 +1,62 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: FontAwesome; }
+
+.blockquote-one:before {
+  content: '\f10d';
+  font-size: 2.5em;
+  color: grey;
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  opacity: 0.3; }
+
+.blockquote-one:after {
+  content: '\f10e';
+  font-size: 2.5em;
+  color: grey;
+  position: absolute;
+  bottom: -110px;
+  left: 260px;
+  opacity: 0.3; }
+
+.blockquote-two:before {
+  content: '\f10d';
+  font-size: 2.5em;
+  color: grey;
+  position: absolute;
+  bottom: 40px;
+  left: 366px;
+  opacity: 0.3; }
+
+.blockquote-two:after {
+  content: '\f10e';
+  font-size: 2.5em;
+  color: grey;
+  position: absolute;
+  bottom: -95px;
+  left: 575px;
+  opacity: 0.3; }
+
+.blockquote-three:before {
+  content: '\f10d';
+  font-size: 2.5em;
+  color: grey;
+  position: absolute;
+  bottom: 40px;
+  left: 998px;
+  opacity: 0.3; }
+
+.blockquote-three:after {
+  content: '\f10e';
+  font-size: 2.5em;
+  color: grey;
+  position: absolute;
+  bottom: -95px;
+  left: 1200px;
+  opacity: 0.3; }
 
 .app {
   margin: 10px 10px 10px 10px; }
@@ -15,11 +70,17 @@ body {
 .fs {
   font-style: italic; }
 
+.fz-middle {
+  font-size: 1.2em; }
+
 .fz-2 {
   font-size: 2em; }
 
 .fz-small {
   font-size: 0.9em; }
+
+.fz-icon {
+  font-size: 0.7em; }
 
 .pos-center {
   text-align: center; }
@@ -30,15 +91,16 @@ body {
 .bg-black {
   background-color: black; }
 
+.bg-whitegrey {
+  background-color: silver; }
+
 .bg-white-container {
   background-color: white;
-  opacity: 0.6;
+  opacity: 0.9;
   height: 50px; }
 
 .code-bg {
-  background: url(public/code.png);
-  background-repeat: no-repeat;
-  background-size: auto; }
+  background-image: url(сode.png); }
 
 .portfolio__user-head {
   display: flex;
@@ -102,10 +164,7 @@ body {
   width: 20%;
   height: 244px;
   border: 1px solid gainsboro;
-  flex-grow: 1;
-  background: url(public/code.png);
-  background-repeat: no-repeat;
-  background-size: auto; }
+  flex-grow: 1; }
 
 .portfolio__user-description-item-head {
   padding: 20px 20px 0 20px; }
@@ -126,3 +185,24 @@ body {
 .portfolio__user-description-item-footer {
   text-align: right;
   padding: 20px; }
+
+.input-field__input {
+  width: 500px;
+  height: 23px; }
+
+.input-field_success {
+  all: initial; }
+
+.input-field__input + .input-field__success:before {
+  content: '\f14a';
+  cursor: pointer;
+  margin: 0 5px 0 5px; }
+
+.input-field__success + .input-field__cancel:before {
+  content: '\f2d3';
+  cursor: pointer; }
+
+.input-field__success:before {
+  content: '\f14a';
+  cursor: pointer;
+  margin: 0 0 0 5px; }
